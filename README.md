@@ -2,6 +2,10 @@
 
 **Wallpeek** is a blazing-fast, cross-platform terminal application that transforms your command line into a dynamic wallpaper browser and setter. Dive into your image collection without leaving the comfort of your terminal, and set your favorite wallpapers with a single keystroke!
 
+
+https://github.com/user-attachments/assets/cb87f4bf-9094-4fa7-9eaf-cfa2886c460b
+
+
 ## ✨ Features
 
 *   **Blazing Fast:** Written in Go for unparalleled performance.
