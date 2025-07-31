@@ -253,7 +253,7 @@ func setWallpaper(path string) {
 		cmd = exec.Command("osascript", "-e", fmt.Sprintf(`tell application "Finder" to set desktop picture to POSIX file "%s"`, path))
 	case "linux":
 		if _, err := exec.LookPath("wypaper"); err == nil {
-			cmd = exec.Command("wypaper", "set", path)
+			cmd = exec.Command("waypaper", "--Wallpaper", path)
 		} else {
 			cmd = exec.Command("gsettings", "set", "org.gnome.desktop.background", "picture-uri", "file://"+path)
 		}
