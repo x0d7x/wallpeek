@@ -262,5 +262,8 @@ func setWallpaper(path string) {
 		fmt.Println("Wallpaper change not implemented on", runtime.GOOS)
 		return
 	}
-	_ = cmd.Run()
+
+	if err := cmd.Run(); err != nil {
+		fmt.Println(err)
+	}
 }
