@@ -51,7 +51,7 @@ You can also build Wallpeek for other operating systems using the provided `Make
 
 ### Dependencies
 
-*   **`wypaper` (Linux only, optional):** For enhanced wallpaper setting on Linux. Install it via your distribution's package manager or from source.
+*   **`waypaper` (Linux only, optional):** For enhanced wallpaper setting on Linux. Install it via your distribution's package manager or from source.
 
 ## 💡 Usage
 
