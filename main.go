@@ -252,8 +252,9 @@ func setWallpaper(path string) {
 	case "darwin":
 		cmd = exec.Command("osascript", "-e", fmt.Sprintf(`tell application "Finder" to set desktop picture to POSIX file "%s"`, path))
 	case "linux":
-		if _, err := exec.LookPath("wypaper"); err == nil {
-			cmd = exec.Command("waypaper", "--Wallpaper", path)
+		const waypaper = "waypaper"
+		if _, err := exec.LookPath(waypaper); err == nil {
+			cmd = exec.Command(waypaper, "--wallpaper", path)
 		} else {
 			cmd = exec.Command("gsettings", "set", "org.gnome.desktop.background", "picture-uri", "file://"+path)
 		}
@@ -261,5 +262,8 @@ func setWallpaper(path string) {
 		fmt.Println("Wallpaper change not implemented on", runtime.GOOS)
 		return
 	}
-	_ = cmd.Run()
+
+	if err := cmd.Run(); err != nil {
+		fmt.Println(err)
+	}
 }
